@@ -1,1 +1,291 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://willnguyen.work//feed.xml" rel="self" type="application/atom+xml" /><link href="https://willnguyen.work//" rel="alternate" type="text/html" /><updated>2019-11-22T13:12:19+07:00</updated><id>https://willnguyen.work//feed.xml</id><title type="html">About</title><subtitle>Show cases project</subtitle><author><name>Will Nguyen</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://willnguyen.work//feed.xml" rel="self" type="application/atom+xml" /><link href="https://willnguyen.work//" rel="alternate" type="text/html" /><updated>2020-03-11T00:15:25+07:00</updated><id>https://willnguyen.work//feed.xml</id><title type="html">About</title><subtitle>Show cases project</subtitle><author><name>Linh Nguyen</name></author><entry><title type="html">Different Types of Data Caching</title><link href="https://willnguyen.work//web%20architecture/different-types-of-caching/" rel="alternate" type="text/html" title="Different Types of Data Caching" /><published>2020-02-06T00:00:00+07:00</published><updated>2020-02-06T00:00:00+07:00</updated><id>https://willnguyen.work//web%20architecture/different-types-of-caching</id><content type="html" xml:base="https://willnguyen.work//web%20architecture/different-types-of-caching/">&lt;h2 id=&quot;caching&quot;&gt;Caching&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Client-Side Caching&lt;/li&gt;
+  &lt;li&gt;Server-Side Caching&lt;/li&gt;
+  &lt;li&gt;Content Delivery Network (CDN) Cache&lt;/li&gt;
+  &lt;li&gt;Page Cache&lt;/li&gt;
+  &lt;li&gt;Opcode Cache&lt;/li&gt;
+  &lt;li&gt;Object Cache&lt;/li&gt;
+  &lt;li&gt;Database Cache&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;client-side-caching&quot;&gt;Client-Side Caching&lt;/h2&gt;
+
+&lt;p&gt;Browser caching&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Local Storage&lt;/li&gt;
+  &lt;li&gt;Session Storage&lt;/li&gt;
+  &lt;li&gt;IndexedDB&lt;/li&gt;
+  &lt;li&gt;Web SQL&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;server-side-caching&quot;&gt;Server-Side Caching&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Redis, memcache.&lt;/li&gt;
+  &lt;li&gt;File cache.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;content-delivery-network-cdn-cache&quot;&gt;Content Delivery Network (CDN) Cache&lt;/h2&gt;
+
+&lt;p&gt;Cloudflare, Cloudfront AWS, Cloud CDN.&lt;/p&gt;
+
+&lt;h2 id=&quot;page-cache&quot;&gt;Page Cache&lt;/h2&gt;</content><author><name>Linh Nguyen</name></author><category term="Cache" /><summary type="html">Different Types of Data Caching</summary></entry><entry><title type="html">Spark</title><link href="https://willnguyen.work//data%20engineering/Spark/" rel="alternate" type="text/html" title="Spark" /><published>2019-12-24T00:00:00+07:00</published><updated>2019-12-24T00:00:00+07:00</updated><id>https://willnguyen.work//data%20engineering/Spark</id><content type="html" xml:base="https://willnguyen.work//data%20engineering/Spark/"></content><author><name>Linh Nguyen</name></author><category term="Data Engineering" /><summary type="html">Spark</summary></entry><entry><title type="html">Map Reduce</title><link href="https://willnguyen.work//data%20engineering/mapreduce/" rel="alternate" type="text/html" title="Map Reduce" /><published>2019-12-23T00:00:00+07:00</published><updated>2019-12-23T00:00:00+07:00</updated><id>https://willnguyen.work//data%20engineering/mapreduce</id><content type="html" xml:base="https://willnguyen.work//data%20engineering/mapreduce/">&lt;p&gt;MapReduce is a programming model that allows us to express the simple computations. (batch processing jobs)
+We were trying to perform but hides the messy details of parallelization, fault-tolerance, data distribution and load balancing in a library, large dataset.&lt;/p&gt;
+
+&lt;p&gt;Users specify:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;a map&lt;/strong&gt; function that processes a key/value pair to generate a set of intermediate key/value pairs, and&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;a reduce&lt;/strong&gt; function that merges all intermediate values associated with the same intermediate key.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/data_engineering/2019-12-23-mapreduce/mapreduce.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Threading programming:
+    task manager, delivery task to worker on thread pool, after worker done, get more to execute. Until done.&lt;/p&gt;
+
+&lt;h2 id=&quot;mapreduce-vs-spark&quot;&gt;MapReduce vs Spark&lt;/h2&gt;
+
+&lt;p&gt;The primary difference between MapReduce and Spark is that MapReduce uses persistent storage and Spark uses Resilient Distributed Datasets&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Spark:&lt;/strong&gt;
+    Support real-time streaming.
+    Lesser line code. Features API
+    In-memory rather disk write.&lt;/p&gt;
+
+&lt;p&gt;Ref: &lt;a href=&quot;https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf&quot;&gt;white paper by Google in 2004&lt;/a&gt;&lt;/p&gt;</content><author><name>Linh Nguyen</name></author><category term="Data Engineering" /><summary type="html">Map Reduce</summary></entry><entry><title type="html">Architectural Patterns</title><link href="https://willnguyen.work//web%20architecture/architectural-patterns/" rel="alternate" type="text/html" title="Architectural Patterns" /><published>2019-04-04T00:00:00+07:00</published><updated>2019-04-04T00:00:00+07:00</updated><id>https://willnguyen.work//web%20architecture/architectural-patterns</id><content type="html" xml:base="https://willnguyen.work//web%20architecture/architectural-patterns/">&lt;p&gt;An architectural pattern is a general, reusable solution to a commonly occurring problem in software architecture within a given context. Architectural patterns are similar to software design pattern but have a broader scope.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Layered pattern&lt;/li&gt;
+  &lt;li&gt;Client-server pattern&lt;/li&gt;
+  &lt;li&gt;Master-slave pattern&lt;/li&gt;
+  &lt;li&gt;Pipe-filter pattern&lt;/li&gt;
+  &lt;li&gt;Broker pattern&lt;/li&gt;
+  &lt;li&gt;Peer-to-peer pattern&lt;/li&gt;
+  &lt;li&gt;Event-bus pattern&lt;/li&gt;
+  &lt;li&gt;Model-view-controller pattern&lt;/li&gt;
+  &lt;li&gt;Blackboard pattern&lt;/li&gt;
+  &lt;li&gt;Interpreter pattern&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;layered-pattern-for-desktop-app-e-commerce-web-app&quot;&gt;Layered pattern: for desktop app, e-commerce web app&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Presetation layer&lt;/li&gt;
+  &lt;li&gt;Application layer&lt;/li&gt;
+  &lt;li&gt;Business logic layer&lt;/li&gt;
+  &lt;li&gt;Data access layer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;client-server-pattern-email-docs-sharing-and-banking&quot;&gt;Client-server pattern: email, docs sharing and banking&lt;/h3&gt;
+
+&lt;h3 id=&quot;master-slave-pattern-database-replication-peripherals-connected-to-a-bus-in-a-computer-system&quot;&gt;Master-slave pattern: database replication, Peripherals connected to a bus in a computer system&lt;/h3&gt;
+
+&lt;h3 id=&quot;pipe-filter-pattern-compilers-workflow&quot;&gt;Pipe-filter pattern: Compilers, Workflow&lt;/h3&gt;
+
+&lt;h3 id=&quot;broker-pattern-message-broker-queue&quot;&gt;Broker pattern: Message broker queue,&lt;/h3&gt;
+
+&lt;h3 id=&quot;peer-to-peer-pattern-file-sharing-networks-multimedia-protocols&quot;&gt;Peer-to-peer pattern: File-sharing networks, Multimedia protocols&lt;/h3&gt;
+
+&lt;h3 id=&quot;event-bus-pattern-android-development-notification-services&quot;&gt;Event-bus pattern: Android development, Notification services&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;o	event source, event listener, channel and event bus
+o	Listeners subscribe to particular channels.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;model-view-controller-pattern-for-web-app&quot;&gt;Model-view-controller pattern: For web app&lt;/h3&gt;
+
+&lt;h3 id=&quot;blackboard-pattern-speech-recognition-vehicle-identification-and-tracking-protein-structure-identification&quot;&gt;Blackboard pattern: Speech recognition, Vehicle identification and tracking, Protein structure identification&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;o	Blackboard
+o	knowledge source
+o	control component
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;interpreter-pattern&quot;&gt;Interpreter pattern&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;o	Database query languages
+o	Languages used to describe communication protocols.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ref:
+&lt;a href=&quot;https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013&quot;&gt;https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013&lt;/a&gt;&lt;/p&gt;</content><author><name>Linh Nguyen</name></author><category term="Web Architecture" /><summary type="html">Architectural Patterns</summary></entry><entry><title type="html">SQL vs. NoSQL</title><link href="https://willnguyen.work//database/sql-vs-nosql/" rel="alternate" type="text/html" title="SQL vs. NoSQL" /><published>2017-05-05T00:00:00+07:00</published><updated>2017-05-05T00:00:00+07:00</updated><id>https://willnguyen.work//database/sql-vs-nosql</id><content type="html" xml:base="https://willnguyen.work//database/sql-vs-nosql/"></content><author><name>Linh Nguyen</name></author><category term="Database" /><summary type="html">The SQL vs NoSQL Difference: MySQL vs MongoDB</summary></entry><entry><title type="html">REST Architecture</title><link href="https://willnguyen.work//web%20architecture/restful-architecture/" rel="alternate" type="text/html" title="REST Architecture" /><published>2017-03-05T00:00:00+07:00</published><updated>2017-03-05T00:00:00+07:00</updated><id>https://willnguyen.work//web%20architecture/restful-architecture</id><content type="html" xml:base="https://willnguyen.work//web%20architecture/restful-architecture/">&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;REST&lt;/strong&gt;: &lt;strong&gt;R&lt;/strong&gt;epresentational &lt;strong&gt;S&lt;/strong&gt;tate &lt;strong&gt;T&lt;/strong&gt;ransfer.&lt;/li&gt;
+  &lt;li&gt;REST is a &lt;strong&gt;style of software architecture&lt;/strong&gt; which exploits the existing technology Web protocols - HTTP: GET, POST, …&lt;/li&gt;
+  &lt;li&gt;RESTful ref to &lt;strong&gt;Web Services implementing&lt;/strong&gt; such an architecture&lt;/li&gt;
+  &lt;li&gt;A term coined by &lt;a href=&quot;https://en.wikipedia.org/wiki/Roy_Fielding&quot; target=&quot;_blank&quot;&gt;Roy Fielding&lt;/a&gt; in 2000&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;architectural-constraints&quot;&gt;Architectural Constraints&lt;/h2&gt;
+
+&lt;p&gt;REST defines &lt;strong&gt;6 architectural constraints&lt;/strong&gt; which make any web service – a true RESTful API.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Uniform interface&lt;/li&gt;
+  &lt;li&gt;Client–server&lt;/li&gt;
+  &lt;li&gt;Stateless&lt;/li&gt;
+  &lt;li&gt;Cacheable&lt;/li&gt;
+  &lt;li&gt;Layered system&lt;/li&gt;
+  &lt;li&gt;Code on demand (optional)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;uniform-interface&quot;&gt;Uniform interface&lt;/h2&gt;
+
+&lt;p&gt;Define resources: e.g. api/users for (website, mobile app, other services)&lt;/p&gt;
+
+&lt;p&gt;There are 4 guidelines principle:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Resource-Based&lt;/strong&gt;: EX: API/users.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Manipulation of Resources Through Representations&lt;/strong&gt;: Client get user id and then delete and modify resource based on that user id.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Self-descriptive Messages&lt;/strong&gt;: URI + HTTP methods + data as json&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hypermedia&lt;/strong&gt; as the Engine of Application State (HATEOAS): Include other links for each response, so client can discover more other resources easily.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;clientserver&quot;&gt;Client–server&lt;/h2&gt;
+
+&lt;p&gt;Client application (Mobile, Front end Angular) and server application(Back end) MUST be able to evolve separately without any dependency on each other.
+A client should know only resource URIs, and that’s all.&lt;/p&gt;
+
+&lt;h2 id=&quot;stateless&quot;&gt;Stateless&lt;/h2&gt;
+
+&lt;p&gt;The server will not store anything about HTTP request.&lt;/p&gt;
+
+&lt;p&gt;Advantages:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Scaling by deploying multiple servers. Because no session related dependency.&lt;/li&gt;
+  &lt;li&gt;Less complex – by removing all server-side state synchronization logic.&lt;/li&gt;
+  &lt;li&gt;Easy to cache.&lt;/li&gt;
+  &lt;li&gt;Never loses track, because the client sends all necessary information with each request.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;cacheable&quot;&gt;Cacheable&lt;/h2&gt;
+
+&lt;p&gt;A well-managed caching partially or completely eliminates some client–server interactions&lt;/p&gt;
+
+&lt;h2 id=&quot;layered-system&quot;&gt;Layered system&lt;/h2&gt;
+
+&lt;p&gt;An application architecture needs to be composed of multiple layers.
+Intermediary servers may improve system availability by enabling load-balancing and by providing shared caches.&lt;/p&gt;
+
+&lt;h2 id=&quot;code-on-demand-optional&quot;&gt;Code on demand (optional)&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;return executable code&lt;/strong&gt; to support a part of your application, e.g., clients may call your API to get a UI widget rendering code.&lt;/p&gt;</content><author><name>Linh Nguyen</name></author><category term="Web Architecture" /><summary type="html">REST and RESTful</summary></entry><entry><title type="html">Inversion of Control</title><link href="https://willnguyen.work//web%20architecture/IoC/" rel="alternate" type="text/html" title="Inversion of Control" /><published>2016-06-15T00:00:00+07:00</published><updated>2016-06-15T00:00:00+07:00</updated><id>https://willnguyen.work//web%20architecture/IoC</id><content type="html" xml:base="https://willnguyen.work//web%20architecture/IoC/">&lt;p&gt;Propose by Martin Fowler:&lt;/p&gt;
+
+&lt;p&gt;“Inversion of Control is too generic a term, and thus people find it confusing. As a result with a lot of discussion with various IoC advocates we settled on the name Dependency Injection”.&lt;/p&gt;
+
+&lt;p&gt;Patterns are all about removing dependencies from your code.
+Callbacks&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Related:&lt;/strong&gt;
+    Event-driven programming, the event loop and dispatch of events/messages is handled by the framework&lt;/p&gt;
+
+&lt;p&gt;Is programming principle which one of SOLID principle?&lt;/p&gt;
+
+&lt;p&gt;The term is related to, but different from, the dependency inversion principle, which concerns itself with decoupling dependencies between high-level and low-level layers through shared abstractions&lt;/p&gt;</content><author><name>Linh Nguyen</name></author><category term="Web Architecture" /><summary type="html">Inversion of Control</summary></entry><entry><title type="html">Design Pattern</title><link href="https://willnguyen.work//object%20oriented%20design/design-pattern/" rel="alternate" type="text/html" title="Design Pattern" /><published>2016-05-10T00:00:00+07:00</published><updated>2016-05-10T00:00:00+07:00</updated><id>https://willnguyen.work//object%20oriented%20design/design-pattern</id><content type="html" xml:base="https://willnguyen.work//object%20oriented%20design/design-pattern/">&lt;p&gt;A design pattern is a general repeatable solution to a commonly occurring problem in software design.
+It is a description or template for how to solve a problem that can be used in many different situations.&lt;/p&gt;
+
+&lt;h2 id=&quot;creational-design-patterns&quot;&gt;Creational design patterns&lt;/h2&gt;
+
+&lt;p&gt;These design patterns are all about class instantiation. This pattern can be further divided into class-creation patterns and object-creational patterns. While class-creation patterns use inheritance effectively in the instantiation process, object-creation patterns use delegation effectively to get the job done.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Abstract Factory: Creates an instance of several families of classes&lt;/li&gt;
+  &lt;li&gt;Builder: Separates object construction from its representation&lt;/li&gt;
+  &lt;li&gt;Factory Method: Creates an instance of several derived classes&lt;/li&gt;
+  &lt;li&gt;Object Pool: Avoid expensive acquisition and release of resources by recycling objects that are no longer in use&lt;/li&gt;
+  &lt;li&gt;Prototype: A fully initialized instance to be copied or cloned&lt;/li&gt;
+  &lt;li&gt;Singleton: A class of which only a single instance can exist&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;structural-design-patterns&quot;&gt;Structural design patterns&lt;/h2&gt;
+
+&lt;p&gt;These design patterns are all about Class and Object composition. Structural class-creation patterns use inheritance to compose interfaces. Structural object-patterns define ways to compose objects to obtain new functionality.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Adapter: Match interfaces of different classes&lt;/li&gt;
+  &lt;li&gt;Bridge: Separates an object’s interface from its implementation&lt;/li&gt;
+  &lt;li&gt;Composite: A tree structure of simple and composite objects&lt;/li&gt;
+  &lt;li&gt;Decorator: Add responsibilities to objects dynamically&lt;/li&gt;
+  &lt;li&gt;Facade: A single class that represents an entire subsystem&lt;/li&gt;
+  &lt;li&gt;Flyweight: A fine-grained instance used for efficient sharing&lt;/li&gt;
+  &lt;li&gt;Private Class Data: Restricts accessor/mutator access&lt;/li&gt;
+  &lt;li&gt;Proxy: An object representing another object&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;behavioral-design-patterns&quot;&gt;Behavioral design patterns&lt;/h2&gt;
+
+&lt;p&gt;These design patterns are all about Class’s objects communication. Behavioral patterns are those patterns that are most specifically concerned with communication between objects.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Chain of responsibility: A way of passing a request between a chain of objects&lt;/li&gt;
+  &lt;li&gt;Command: Encapsulate a command request as an object&lt;/li&gt;
+  &lt;li&gt;Interpreter: A way to include language elements in a program&lt;/li&gt;
+  &lt;li&gt;Iterator: Sequentially access the elements of a collection&lt;/li&gt;
+  &lt;li&gt;Mediator: Defines simplified communication between classes&lt;/li&gt;
+  &lt;li&gt;Memento: Capture and restore an object’s internal state&lt;/li&gt;
+  &lt;li&gt;Null Object: Designed to act as a default value of an object&lt;/li&gt;
+  &lt;li&gt;Observer: A way of notifying change to a number of classes&lt;/li&gt;
+  &lt;li&gt;State: Alter an object’s behavior when its state changes&lt;/li&gt;
+  &lt;li&gt;Strategy: Encapsulates an algorithm inside a class&lt;/li&gt;
+  &lt;li&gt;Template method: Defer the exact steps of an algorithm to a subclass&lt;/li&gt;
+  &lt;li&gt;Visitor: Defines a new operation to a class without change&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ref:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://refactoring.guru/&quot; target=&quot;_blank&quot;&gt;Refactoring.guru&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://sourcemaking.com/&quot; target=&quot;_blank&quot;&gt;sourcemaking.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Linh Nguyen</name></author><category term="Web Architecture" /><summary type="html">Design Pattern</summary></entry><entry><title type="html">SQL Optimization</title><link href="https://willnguyen.work//database/sql-optimization/" rel="alternate" type="text/html" title="SQL Optimization" /><published>2016-05-05T00:00:00+07:00</published><updated>2016-05-05T00:00:00+07:00</updated><id>https://willnguyen.work//database/sql-optimization</id><content type="html" xml:base="https://willnguyen.work//database/sql-optimization/">&lt;ol&gt;
+  &lt;li&gt;Try to restrict the queries result set by using the WHERE clause.&lt;/li&gt;
+  &lt;li&gt;Try to restrict the queries result set by returning only the particular columns from the table, not all the table’s columns.&lt;/li&gt;
+  &lt;li&gt;Use views and stored procedures instead of heavy-duty queries.&lt;/li&gt;
+  &lt;li&gt;Whenever possible, try to avoid using SQL Server cursors.&lt;/li&gt;
+  &lt;li&gt;If you need to return the total table’s row count, you can use an alternative way instead of the SELECT COUNT(*) statement.&lt;/li&gt;
+  &lt;li&gt;Try to use constraints instead of triggers, whenever possible.&lt;/li&gt;
+  &lt;li&gt;Use table variables instead of temporary tables.&lt;/li&gt;
+  &lt;li&gt;Try to avoid the HAVING clause, whenever possible.&lt;/li&gt;
+  &lt;li&gt;Whenever possible, try to avoid using the DISTINCT clause.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Include SET NOCOUNT ON statement into your stored procedures to stop the message indicating the number of rows affected by a T-SQL statement.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Use select statements with the TOP keyword or the SET ROWCOUNT statement if you need to return only the first n rows.&lt;/li&gt;
+  &lt;li&gt;Use the FAST number rows table hint if you need to quickly return ‘number rows’ rows.&lt;/li&gt;
+  &lt;li&gt;Try to use UNION ALL statement instead of UNION, whenever possible.&lt;/li&gt;
+  &lt;li&gt;Do not use optimizer hints in your queries.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;What are the types of join and explain each?
+	Inner join, union
+	Left join, right join
+	Full join, outer join&lt;/p&gt;
+
+&lt;p&gt;Ref: https://www.databasejournal.com/features/mssql/article.php/1437391/Transact-SQL-Optimization-Tips.htm&lt;/p&gt;</content><author><name>Linh Nguyen</name></author><category term="Database" /><summary type="html">SQL Optimization</summary></entry><entry><title type="html">Software Architecture</title><link href="https://willnguyen.work//web%20architecture/software-architecture/" rel="alternate" type="text/html" title="Software Architecture" /><published>2016-05-04T00:00:00+07:00</published><updated>2016-05-04T00:00:00+07:00</updated><id>https://willnguyen.work//web%20architecture/software-architecture</id><content type="html" xml:base="https://willnguyen.work//web%20architecture/software-architecture/">&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;What is software architecture?&lt;/strong&gt; The answer is &lt;strong&gt;multitiered&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Architecture patterns: define the overall shape and structure of software applications. (MVC, REST, P2P, Layer…)&lt;/li&gt;
+  &lt;li&gt;Design Principles: (SOLID) high level guidelines to design better software.&lt;/li&gt;
+  &lt;li&gt;Design Patterns: low-level solutions related to implementation (Gang of Four patterns: Abstract Factory, Factory, Singleton, Command, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;what-goes-wrong-with-software&quot;&gt;What goes wrong with software?&lt;/h3&gt;
+
+&lt;p&gt;At first stage, all software are often clean, elegant, and compelling. But somethings begins to happen in long run. The software starts to rot and everyone blame for other’s false.&lt;/p&gt;
+
+&lt;p&gt;Why?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Everyone with different skills, and all have their own code standards. (Some of them believe they’re often right about their design). Time will prove it. I don’t know&lt;/li&gt;
+  &lt;li&gt;Business change all the time, but customers don’t give time for developer to implement new change. (Customers have their own problem, work under their upper manager, or their investor who expect software deploy ASAP)&lt;/li&gt;
+  &lt;li&gt;Under tight budget, deadline, and over-expectation of customers. Developers’re often code under high pressure. They start to break code stardards, skip the best practice guilines to speed up and meet dealine.&lt;/li&gt;
+  &lt;li&gt;Technique debt grows everyday. It accumulates and creates great blocker for development progress.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ref:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://web.archive.org/web/20150906155800/http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf&quot;&gt;https://web.archive.org/web/20150906155800/http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf&lt;/a&gt;
+&lt;a href=&quot;https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013&quot;&gt;https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013&lt;/a&gt;&lt;/p&gt;</content><author><name>Linh Nguyen</name></author><category term="Web Architecture" /><summary type="html">Software Architecture</summary></entry></feed>
